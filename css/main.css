@@ -1,41 +1,53 @@
 body {
     padding: 0;
     margin: 0;
+    font: .8em Arial,Helvetica,sans-serif;
 }
 
-.map {
+.outer__map, .outer__visualize {
     padding: 10px;
     margin: 0;
+    text-align: center;
 }
 
-.map__res {
-    padding: 0;
-    margin: 10px 0;
-    font-size: 14px;
-    font-family: Arial;
-}
-
-.map__row {
+.map__row, .visualize__row {
     padding: 0;
     margin: 0;
-    font-size: 0;
+    font-size: 13;
     white-space: nowrap;
 }
 
-.map__cell {
+.map__cell, .visualize__cell {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
     padding: 0;
     margin-right: 1px;
     margin-bottom: 1px;
     border: 1px solid #eee;
+    text-align: center;
+    line-height: 32px;
+    vertical-align: middle;
 }
 
-.map__cell_water {
+.map__cell_water, .visualize__cell.water {
     background-color: #65a6ff;
 }
 
-.map__cell_island {
+.map__cell_island, .visualize__cell.island {
     background-color: #fad946;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+}
+
+.visualize__cell.current {
+    transition: .5s all ease-in;
+    background-color: red;    
+}
+
+.visualize__count, .map__count {
+    padding-bottom: 10px;
 }
